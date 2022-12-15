@@ -1,0 +1,64 @@
+$base-duration: 500ms;
+
+
+// Breakpoints
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	outline: none;
+}
+
+figure {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15.5rem;
+	height: 25rem;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	overflow: hidden;
+	&:hover {
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		h5{
+			z-index: 1;
+		}
+		img {
+			transform: scale(1.05);
+		}
+	}
+	h5 {
+		position: absolute;
+		top: 10px;
+		left: 0px;
+		margin-left: 10px;
+		padding: 2%;
+		background-color: rgba(rgb(255, 255, 255),1.75);
+		border-radius: 10px;
+		color: rgb(0, 0, 0);
+		border-color: 3px solid black;
+		font-weight: 100;
+		line-height: 1;
+	}
+	img {
+		height: 100%;
+		transition: 0.25s;
+	}
+	figcaption {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		padding: 5px;
+		background-color: rgba(white,1);
+		box-shadow: 0 0 0px rgba(black,0.4);
+		line-height: 1;
+		transition: 0.25s;
+		
+	}
+}
